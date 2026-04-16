@@ -13,14 +13,14 @@ import tensorflow
 import numpy as np
 from tensorflow import keras
 from keras.preprocessing import image
-# from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import load_img
 
 from PIL import Image
 # import matplotlib.pyplot as plt
 # import matplotlib.image as img
 
 # creating a object
-model = keras.models.load_model('my_model.keras', compile=False)
+model = keras.models.load_model('my_model.keras')
 path = st.file_uploader("Upload an image of a cat or a dog", type=["jpg", "jpeg", "png"])
 
 
