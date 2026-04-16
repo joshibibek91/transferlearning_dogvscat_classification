@@ -20,7 +20,7 @@ from PIL import Image
 # import matplotlib.image as img
 
 # creating a object
-model = keras.models.load_model('my_model.keras')
+model = keras.models.load_model('my_model.keras', compile=False)
 path = st.file_uploader("Upload an image of a cat or a dog", type=["jpg", "jpeg", "png"])
 
 
