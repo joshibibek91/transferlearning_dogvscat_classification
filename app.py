@@ -12,7 +12,7 @@ import tensorflow
 # import keras
 import numpy as np
 from tensorflow import keras
-from keras.preprocessing import image
+# from keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import load_img
 
 from PIL import Image
