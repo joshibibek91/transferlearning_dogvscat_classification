@@ -9,11 +9,11 @@ st.write("This is a simple image classifier app that can classify images of cats
 
 #Testing the models
 import tensorflow
-import keras
+# import keras
 import numpy as np
 from tensorflow import keras
 from keras.preprocessing import image
-from tensorflow.keras.preprocessing.image import load_img
+# from tensorflow.keras.preprocessing.image import load_img
 
 from PIL import Image
 # import matplotlib.pyplot as plt
