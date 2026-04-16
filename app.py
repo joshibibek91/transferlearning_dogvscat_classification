@@ -20,15 +20,17 @@ from PIL import Image
 # import matplotlib.image as img
 
 # creating a object
-model = keras.models.load_model('my_model.keras')
+model = keras.models.load_model('./my_model.keras')
 path = st.file_uploader("Upload an image of a cat or a dog", type=["jpg", "jpeg", "png"])
 
 
 if st.button("Predict"):
     class_labels = {0: "Cat", 1: "Dog"}
 
-    test_image = load_img(path, target_size=(224, 224))
-    test_image = tensorflow.keras.preprocessing.image.img_to_array(test_image)/255
+    # image_file = Image.open(path)
+    # image_file = image_file.resize((224, 224))
+    image_file = load_img(path, target_size=(224, 224))
+    test_image = tensorflow.keras.preprocessing.image.img_to_array(image_file)/255
     test_image = np.expand_dims(test_image, 0)
     prediction = model.predict(test_image)
     result = np.argmax(prediction)
